@@ -33,6 +33,7 @@ public class CreditCardForm{
 		Thread.sleep(3000);
 		driver.close();
 		System.out.println("Successfully launched");
+		System.out.println("Test");
 	}
 	
 	
