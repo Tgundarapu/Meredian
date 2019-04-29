@@ -17,7 +17,8 @@ public class CreditCardForm{
 	
 	public static WebDriver driver;
 	
-	public static void main(String args[]) throws InterruptedException{
+	@Test
+	public static void openBrowser() throws InterruptedException{
 		String meredianURL = "https://beta.loanspq.com/login.aspx?enc2=lqc_NUOh2_sZoFnhMuzKAiuDjxZG8O04St2Hlzvvbvs";
 		File file = new File("D:\\Thiru\\IEDriverServer32.exe");
 		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
