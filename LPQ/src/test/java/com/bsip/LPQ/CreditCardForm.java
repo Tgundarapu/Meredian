@@ -17,7 +17,7 @@ public class CreditCardForm{
 	
 	public WebDriver driver;
 	
-	@BeforeClass
+	@Test
 	public void openBrowser() throws InterruptedException{
 		String meredianURL = "https://beta.loanspq.com/login.aspx?enc2=lqc_NUOh2_sZoFnhMuzKAiuDjxZG8O04St2Hlzvvbvs";
 		File file = new File("D:\\Thiru\\IEDriverServer32.exe");
@@ -31,10 +31,12 @@ public class CreditCardForm{
 		Thread.sleep(2000);
 		Assert.assertEquals(driver.getTitle(), "LoansPQ & Xpress Accounts Login");
 		System.out.println("Meridian login page is displayed");
+		Thread.sleep(3000);
+		driver.close();
 	}
 	
-	@Test(priority=1)	
-	public void login(){	
+	
+	/*public void login(){	
 		driver.findElement(By.id("ctl00_bc_LoginMain_txtLogin")).sendKeys("ALOKA_QA_BH");
 		driver.findElement(By.id("ctl00_bc_LoginMain_btnLogin")).click();
 		driver.findElement(By.id("ctl00_bc_MFLQuestions_Answer1")).sendKeys("jhansi");
@@ -48,7 +50,6 @@ public class CreditCardForm{
 		System.out.println("User successfully logged in");
 	}
 	
-	@Test(priority=2)
 	public void selectCreditCard() {
 		driver.findElement(By.linkText("Start New App")).click();
 		WebElement iframe = driver.findElement(By.id("TB_iframeContent"));
@@ -58,7 +59,6 @@ public class CreditCardForm{
 		System.out.println("Credit card page is displayed");
 	}
 	
-	@Test(priority=3)
 	public void formFilling() {
 		Select purposeDropdown = new Select(driver.findElement(By.id("RequestType_RequestType")));
 		purposeDropdown.selectByIndex(1);
@@ -90,8 +90,8 @@ public class CreditCardForm{
 		driver.findElement(By.id("CQuest_rpt_ctl01_SingleCustomQuestion_chkAnswer_1")).click();	
 		driver.findElement(By.id("runCreditbtn_btnSavePullCredit")).click();	
 		}
-	@AfterClass
+	@Test
 	public void closeBrowser() {
 		driver.close();
-	}
+	}*/
 }

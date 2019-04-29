@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Example test run]">
+  <test name="Simple Test(failed)">
+    <classes>
+      <class name="com.bsip.LPQ.CreditCardForm">
+        <methods>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.bsip.LPQ.CreditCardForm -->
+    </classes>
+  </test> <!-- Simple Test(failed) -->
+</suite> <!-- Failed suite [Example test run] -->
