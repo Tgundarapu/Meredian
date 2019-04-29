@@ -15,10 +15,9 @@ import org.testng.annotations.Test;
 
 public class CreditCardForm{
 	
-	public WebDriver driver;
+	public static WebDriver driver;
 	
-	@Test
-	public void openBrowser() throws InterruptedException{
+	public static void main(String args[]) throws InterruptedException{
 		String meredianURL = "https://beta.loanspq.com/login.aspx?enc2=lqc_NUOh2_sZoFnhMuzKAiuDjxZG8O04St2Hlzvvbvs";
 		File file = new File("D:\\Thiru\\IEDriverServer32.exe");
 		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
@@ -33,7 +32,7 @@ public class CreditCardForm{
 		System.out.println("Meridian login page is displayed");
 		Thread.sleep(3000);
 		driver.close();
-		System.out.println("Success");
+		System.out.println("Successfully launched");
 	}
 	
 	
