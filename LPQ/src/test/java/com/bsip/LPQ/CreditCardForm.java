@@ -33,6 +33,7 @@ public class CreditCardForm{
 		System.out.println("Meridian login page is displayed");
 		Thread.sleep(3000);
 		driver.close();
+		System.out.println("Success");
 	}
 	
 	
